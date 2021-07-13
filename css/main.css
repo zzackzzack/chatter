@@ -509,6 +509,13 @@ p {
   width:20%;
   margin-bottom: 10%;
 }
+.about img{
+  /* height:50%;
+  width:auto; */
+  height:auto;
+  width:20%;
+  margin-bottom: 10%;
+}
 .about h2{
   margin-top:10%;
 }
@@ -873,6 +880,11 @@ footer h6 {
     width: 40%;
   }
 
+  .about img {
+    height: auto;
+    width: 40%;
+  }
+
   fabout {
     padding-top:50%;
     text-align: center;
@@ -975,20 +987,20 @@ footer h6 {
     text-align: center;
     align-items: center;
   }
-  .last img{
+  /* .last img{
     display: none;
-  }
+  } */
   .last{
     position: relative;
     overflow: hidden;
   }
   .lastHiddenImg{
-    position: absolulte;
+    position: absolute;
     margin:0;
     padding:0;
-    top:0;
+    /* top:0;
     right:0;
-    left:0;
+    left:0; */
     bottom:0;
     z-index: 10;
   }

@@ -82,6 +82,31 @@ $(document).ready(function() {
       });
   }
 
+  function playGIF(){
+    var image = $('.aboutImg')
+
+      var scrollTop = $(window).scrollTop() + tolerancePixel;
+      var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+
+      image.each(function(index, el) {
+          var yTopMedia = $(this).offset().top;
+          var yBottomMedia = $(this).height() + yTopMedia;
+
+          if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){ 
+            //view explaination in `In brief` section above
+            setTimeout(function(){
+              // image.classList.add('pause');
+              this.value = 'play';
+            },800)
+          } else {
+                  // image.classList.remove('pause');
+                  this.value = 'pause';
+          }
+      });
+
+
+  }
+
   function stickyShow(){
     var scrollTop = $(window).scrollTop() + tolerancePixel;
     var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
@@ -92,31 +117,31 @@ $(document).ready(function() {
     }
   }
 
-  function cricleInc(){
-    var scrollTop = $(window).scrollTop() + tolerancePixel;
-    var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+  // function cricleInc(){
+  //   var scrollTop = $(window).scrollTop() + tolerancePixel;
+  //   var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
 
-        var yTopMedia = $('.circleMe').offset().top;
-        var yBottomMedia = $(".circleMe").height() + yTopMedia;
-        console.log(scrollTop)
-        console.log(scrollBottom)
+  //       var yTopMedia = $('.circleMe').offset().top;
+  //       var yBottomMedia = $(".circleMe").height() + yTopMedia;
+  //       console.log(scrollTop)
+  //       console.log(scrollBottom)
 
-        if($(window).scrollTop() + $(window).height() > $(document).height()*0.95) {
-          setTimeout(function(){
-            $('.circleMe').stop().animate({
-            zoom: 2,
-        })
-      },900);
-      }else{
-        $('.circleMe').stop().animate({
-          zoom: 1,
-      });
-      }
-  }
+  //       if($(window).scrollTop() + $(window).height() > $(document).height()*0.95) {
+  //         setTimeout(function(){
+  //           $('.circleMe').stop().animate({
+  //           zoom: 2,
+  //       })
+  //     },900);
+  //     }else{
+  //       $('.circleMe').stop().animate({
+  //         zoom: 1,
+  //     });
+  //     }
+  // }
 
 
   $(document).on('scroll', checkMedia);
   $(document).on('scroll', stickyShow);
-  // $(document).on('scroll', cricleInc);
+  $(document).on('scroll', playGIF);
 
 });
