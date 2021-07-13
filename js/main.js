@@ -117,6 +117,6 @@ $(document).ready(function() {
 
   $(document).on('scroll', checkMedia);
   $(document).on('scroll', stickyShow);
-  $(document).on('scroll', cricleInc);
+  // $(document).on('scroll', cricleInc);
 
 });
