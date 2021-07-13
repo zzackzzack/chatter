@@ -48,7 +48,7 @@
       </p>
         <div class="hero-btns">
           <!-- Hero Btn First -->
-          <a data-scroll href="#about-us">카카오톡 친구 추가하기</a>
+          <a data-scroll href="#" onclick="addChannel();">카카오톡 친구 추가하기</a>
           </div>
       </div>
     </div>
@@ -119,4 +119,18 @@
   <script src="js/slick.min.js"></script>
   <script src="js/smooth-scroll.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+  <script type="text/javascript">
+  Kakao.init('768b7c74b986929f1975798a57c6585f');
+  Kakao.isInitialized();
+    function addChannel() {
+      Kakao.Channel.addChannel({
+        channelPublicId: '_tRTBs',
+      })
+      alert("asdf")
+    }
+  </script>
+
+
   <!-- Scripts Ends -->
