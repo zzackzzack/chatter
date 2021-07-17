@@ -487,9 +487,11 @@ p {
 .hero h1 {
   margin-top: 100px;
 }
+
 .hero p {
   margin-bottom: 50px;
 }
+
 /*-----------------------------------------------------------
   5. Services
 -------------------------------------------------------------*/
@@ -808,9 +810,11 @@ footer h6 {
   11. Responsive
 -------------------------------------------------------------*/
 @media (max-width: 1700px) {
+  
   .hero-btns {
     margin-bottom: 200px;
   }
+  
   .about {
     text-align: center;
     align-items: center;
@@ -858,10 +862,11 @@ footer h6 {
     /* margin-top: 150px; */
     width: 40%;
   }
-
+  /*
   .hero h1 {
     margin-top: 200px;
   }
+  */
   h2 {
     font-size: 2rem;
     line-height: 3rem;
@@ -888,7 +893,6 @@ footer h6 {
   .hero img {
     display: none;
   }
-
   .hero {
     text-align: center;
   }
