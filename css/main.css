@@ -80,10 +80,22 @@ div.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 80%;
-  margin-left: 70%;
+  margin-left: 60%;
   padding: 50px;
   font-size: 20px;
   display: none;
+}
+
+@media all and (min-width: 1080px) {
+  div.sticky {
+    margin-left: 65%;
+  }
+}
+
+@media all and (min-width: 1250px) {
+  div.sticky {
+    margin-left: 70%;
+  }
 }
 
 .sticky-btns a:first-child {
