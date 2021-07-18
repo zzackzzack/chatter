@@ -810,11 +810,10 @@ footer h6 {
   11. Responsive
 -------------------------------------------------------------*/
 @media (max-width: 1700px) {
-  
   .hero-btns {
     margin-bottom: 200px;
   }
-  
+
   .about {
     text-align: center;
     align-items: center;
@@ -1011,6 +1010,9 @@ footer h6 {
     width: 60%;
     margin-left: 20%;
   }
+  hr {
+    width: 100%;
+  }
 }
 
 @media (max-width: 575px) {
@@ -1048,6 +1050,14 @@ footer h6 {
     position: absolute;
     display: inline-block;
     z-index: 10;
+  }
+
+  .last {
+    text-align: center;
+  }
+
+  .last img {
+    margin-left: 0;
   }
 }
 @media (max-width: 454px) {
