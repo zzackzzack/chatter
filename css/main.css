@@ -23,6 +23,8 @@
 /*-----------------------------------------------------------
     1. General Styles 
 -------------------------------------------------------------*/
+
+
 * {
   margin: 0;
   padding: 0;
@@ -187,7 +189,7 @@ hr {
 
 .extra p {
   color: #7a7a7a;
-  font: "Heebo";
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .last {
@@ -205,8 +207,7 @@ hr {
 ------------------------------------------------------------*/
 body {
   color: #314584;
-  /* font-family: 'Work Sans', sans-serif; */
-  font-family: "Heebo";
+  font-family: 'Nanum Gothic', sans-serif;
   font-size: 14px;
   font-weight: 400;
   overflow-x: hidden;
@@ -215,14 +216,14 @@ body {
 }
 h1,
 .h1 {
-  font-family: "Inter", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   font-weight: bold;
   font-size: 4.4rem;
   margin-bottom: 15px;
 }
 h2,
 .h2 {
-  font-family: "Heebo";
+  font-family: 'Nanum Gothic', sans-serif;
   font-weight: bold;
   font-size: 2.5rem;
   line-height: 3.5rem;
@@ -256,7 +257,7 @@ h6,
   color: #314584;
 }
 p {
-  font-family: "Heebo";
+  font-family: 'Nanum Gothic', sans-serif;
   font-weight: normal;
   font-size: 1.1rem;
   line-height: 1.8;
@@ -281,8 +282,7 @@ p {
   background-color: #fff;
   border-radius: 3px;
   font-size: 1.2rem;
-  /* font-family: 'Work Sans', sans-serif; */
-  font-family: "Heebo";
+  font-family: 'Nanum Gothic', sans-serif;
   font-weight: 600;
   color: #ff3946;
 }
@@ -489,6 +489,7 @@ p {
 }
 
 .hero p {
+  font-family: 'Nanum Gothic', sans-serif;
   margin-bottom: 50px;
 }
 
@@ -549,213 +550,11 @@ p {
 }
 .about h2 {
   margin-top: 10%;
+  font-family: 'Nanum Gothic', sans-serif;
+
 }
 /*-----------------------------------------------------------
- 7. Portfolio
--------------------------------------------------------------*/
-.portfolio-aside img {
-  padding-top: 20px;
-  position: absolute;
-  left: -20px;
-}
-.work-box {
-  margin-bottom: 30px;
-}
-.work-box img {
-  width: 370px;
-  height: auto;
-}
-/* Portfolio Gallery Hover */
-.photobox {
-  display: inline-block;
-}
-.photobox__previewbox {
-  position: relative;
-  overflow: hidden;
-}
-.photobox__preview {
-  display: block;
-  max-width: 100%;
-}
-.photobox__previewbox:before {
-  content: "";
-}
-.photobox_type10 .photobox__previewbox:before {
-  width: 0;
-  height: 0;
-  padding: 25%;
-  background-color: #314584;
-  opacity: 0.8;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transition: transform calc(var(--photoboxAnimationDuration, 0.8s) / 2) ease;
-  will-change: transform;
-  transform: translate(-50%, -50%) scale(0);
-}
-.photobox_type10:hover .photobox__previewbox:before {
-  transform: translate(-50%, -50%) scale(4);
-  transition-duration: var(--photoboxAnimationDuration, 0.8s);
-}
-.photobox_type10 .photobox__label {
-  width: 95%;
-  text-align: center;
-  opacity: 0;
-  transition: opacity calc(var(--photoboxAnimationDuration, 0.8s) / 4)
-      cubic-bezier(0.71, 0.05, 0.29, 0.9),
-    transform calc(var(--photoboxAnimationDuration, 0.8s) / 4)
-      cubic-bezier(0.71, 0.05, 0.29, 0.9);
-  will-change: opacity, transform;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 200%);
-  z-index: 3;
-  color: #fff;
-  /* font-family: 'Work Sans', sans-serif; */
-  font-family: "Heebo";
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-.photobox_type10:hover .photobox__label {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-  transition-duration: calc(var(--photoboxAnimationDuration, 0.8s) / 2);
-  transition-delay: calc(var(--photoboxAnimationDuration, 0.8s) / 4);
-}
-.hide {
-  display: none;
-  transition: all 0.3s ease;
-}
-/*-----------------------------------------------------------
-  8. Blog
--------------------------------------------------------------*/
-.blog-aside img {
-  position: absolute;
-  right: -20px;
-  margin-top: 200px;
-}
-.blog {
-  padding: 25px 0px;
-  margin-bottom: 100px;
-}
-.blog-box {
-  background-color: #fff;
-  min-height: 330px;
-  max-width: 370px;
-  padding: 50px 25px;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(28, 31, 33, 0.15);
-  -moz-box-shadow: 0px 3px 7px 0px rgba(28, 31, 33, 0.15);
-  box-shadow: 0px 3px 7px 0px rgba(28, 31, 33, 0.15);
-  margin: 10px;
-}
-.blog-box p:nth-child(2) {
-  font-size: 0.9rem;
-  color: #6e757a !important;
-}
-.blog-box p:nth-child(3) {
-  font-size: 1.2rem;
-  color: #314584;
-}
-.slick-prev {
-  position: absolute;
-  right: 60px;
-  top: -50px;
-}
-.slick-next {
-  position: absolute;
-  right: 10px;
-  top: -50px;
-}
-.blog-slider button {
-  font-size: 3rem;
-  border: none;
-  background-color: #fff;
-  color: #bbbbbc;
-}
-.blog-slider button:hover {
-  color: #314584;
-  transition: all 0.3s ease;
-}
-.blog-first {
-  background-color: #ff3946;
-}
-.blog-first h6 {
-  color: #fff;
-}
-.blog-first p:nth-child(2) {
-  color: #fff !important;
-}
-.blog-first p:nth-child(3) {
-  color: #fff;
-}
-.blog-slider {
-  cursor: pointer;
-}
-.hide-blog {
-  display: none;
-}
-#blog-btn {
-  color: #ff3946;
-  font-size: 1.2rem;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 600;
-  background-color: #fff;
-  border: none;
-  margin-top: 20px;
-}
-#blog-btn:hover {
-  color: #314584;
-}
-.hide-me {
-  display: none;
-}
-/*-----------------------------------------------------------
-  9. Contact
--------------------------------------------------------------*/
-.contact {
-  max-height: 550px;
-}
-.email input {
-  width: 100%;
-  height: 60px;
-  background-color: #f4fafe;
-  border: none;
-  padding: 0px 20px;
-  color: #314584;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: #314584;
-  font-weight: 600;
-}
-::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #314584;
-  font-weight: 600;
-}
-:-ms-input-placeholder {
-  /* IE 10+ */
-  color: #314584;
-  font-weight: 600;
-}
-:-moz-placeholder {
-  /* Firefox 18- */
-  color: #314584;
-  font-weight: 600;
-}
-textarea {
-  background-color: #f4fafe;
-  border: none;
-  width: 100%;
-  padding: 20px;
-  margin-top: 15px;
-  color: #314584;
-  font-weight: 600;
-}
+ 
 /*-----------------------------------------------------------
   10. Footer
 -------------------------------------------------------------*/
@@ -982,6 +781,8 @@ footer h6 {
     text-align: center;
   }
   .last {
+  font-family: 'Nanum Gothic', sans-serif;
+
     margin-bottom: 10%;
   }
 }
@@ -1002,6 +803,7 @@ footer h6 {
     align-items: center;
   }
   .last {
+  font-family: 'Nanum Gothic', sans-serif;
     padding-top: 20%;
     padding-bottom: 20%;
   }
@@ -1066,6 +868,7 @@ footer h6 {
     margin-top: 50px;
   }
   .hero p {
+  font-family: 'Nanum Gothic', sans-serif;
     font-size: 0.8rem;
   }
   .hero-btns a:first-child {
